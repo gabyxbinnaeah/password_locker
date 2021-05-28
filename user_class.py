@@ -4,8 +4,12 @@ class User:
     '''
     userList=[]
 
-    def __init__(self,name,email_address,password):
+    def __init__(self,fname,lname,email_address,password):
         '''
         initialize properties
         '''
+        self.fname = fname
+        self.lname = lname
+        self.email_address = email_address
+        self.password = password
         
