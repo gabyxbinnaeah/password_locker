@@ -14,4 +14,11 @@ class TestClass(unittest.TestCase):
         self.new_user=("Caleb","oginga","caleb@ms.com","new21oginga")
 
 
-    
+    def user_creation(self):
+        '''
+        method that checks if function creates user 
+        '''
+        self.assertEual(self.new_user.fname,"Caleb")
+        self.assertEual(self.new_user.lname,"oginga")
+        self.assertEual(self.new_user.email_address,"caleb@ms.com")
+        self.assertEual(self.new_user.password,"new21oginga")
