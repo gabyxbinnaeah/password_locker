@@ -12,6 +12,7 @@ class TestClass(unittest.TestCase):
         set up a method to run before each test cases
         '''
         self.new_user= User("caleb","oginga","caleb@ms.com","new21oginga")
+        self.new_credential= Credentials( 'facebook','gabyxbinnaeh','flavian')
 
 
     def test_user_creation(self):
@@ -29,7 +30,28 @@ class TestClass(unittest.TestCase):
          '''
          self.new_user.save_user()
          self.assertEqual(len(User.userList),1)
-       
+
+    def  test_credential_creation(self):
+        '''
+        checks if method creates credential
+        '''
+
+        # self.new_credential= Credentials( 'facebook','gabyxbinnaeh','flavian')
+
+        self.assertEqual(self.new_credential.account,'facebook')
+        self.assertEqual(self.new_credential.username,'gabyxbinnaeh')
+        self.assertEqual(self.new_credential.password,'flavian')
+
+
+    def test_save_credentials(self):
+        '''
+        method that checks for save credentials i
+        '''
+        self.new_credential= Credentials( 'facebook','gabyxbinnaeh','flavian')
+
+
+        self.new_credential.save_credential()
+        self.assertEqual(len(self.Credentials.credentialList),1)
        
 
    
