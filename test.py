@@ -1,5 +1,5 @@
 import unittest
-from credential_classes import Credentials
+from credential_class import Credentials
 from user_class import User
 
 class TestClass(unittest.TestCase):
@@ -11,14 +11,28 @@ class TestClass(unittest.TestCase):
         '''
         set up a method to run before each test cases
         '''
-        self.new_user=("Caleb","oginga","caleb@ms.com","new21oginga")
+        self.new_user= User("caleb","oginga","caleb@ms.com","new21oginga")
 
 
-    def user_creation(self):
+    def test_user_creation(self):
         '''
         method that checks if function creates user 
         '''
-        self.assertEual(self.new_user.fname,"Caleb")
-        self.assertEual(self.new_user.lname,"oginga")
-        self.assertEual(self.new_user.email_address,"caleb@ms.com")
-        self.assertEual(self.new_user.password,"new21oginga")
+        self.assertEqual(self.new_user.first_name,"caleb")
+        self.assertEqual(self.new_user.last_name,"oginga")
+        self.assertEqual(self.new_user.email_address,"caleb@ms.com")
+        self.assertEqual(self.new_user.password,"new21oginga")
+
+    def  test_save_user(self):
+         '''
+         test if method saves user
+         '''
+         self.new_user.save_user()
+         self.assertEqual(len(User.userList),1)
+       
+       
+
+   
+
+if __name__ == "__main__":
+    unittest.main()

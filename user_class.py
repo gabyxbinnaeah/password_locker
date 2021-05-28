@@ -8,8 +8,9 @@ class User:
         '''
         initialize properties
         '''
-        self.fname = fname
-        self.lname = lname
+        self.first_name = fname
+        self.last_name = lname
         self.email_address = email_address
         self.password = password
-        
+
+    
