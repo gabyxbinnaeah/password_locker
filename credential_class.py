@@ -26,6 +26,10 @@ class Credentials:
 
 
 
-    
+    def delete_credential(self):
+        '''
+        deletes credential
+        '''
+        Credentials.credentialList.remove(self)
 
 

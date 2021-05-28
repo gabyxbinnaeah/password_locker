@@ -77,9 +77,24 @@ class TestClass(unittest.TestCase):
         '''
         self.new_credential.save_credential()
         test_credential=Credentials('linkedin','gabu','gabu23')
+        test_credential.save_credential()
         test_credential.delete_credential()
 
         self.assertEqual(len(Credentials.credentialList),1)
+
+
+    def  test_find_credentials(self):
+
+        '''
+        test if method finds the user credentials using user account
+        '''
+        self.new_credential.save_credential()
+        test_credential=Credentials('linkedin','gabs','gabs12')
+        test_credential.save_credential()
+
+        found_credentials=Credentials.find_credential_by_account('linkedin')
+
+        self.assertEqual(found_credentials.username,Credentials.username)
 
         
 
