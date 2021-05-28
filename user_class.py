@@ -13,4 +13,8 @@ class User:
         self.email_address = email_address
         self.password = password
 
-    
+    def save_user(self):
+        '''
+        saves user
+        '''
+        User.userList.append(self)
