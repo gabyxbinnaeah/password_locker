@@ -15,6 +15,13 @@ class TestClass(unittest.TestCase):
         self.new_credential= Credentials( 'facebook','gabyxbinnaeh','flavian')
 
 
+    def tearDown(self):
+        '''
+        clears the counter after evry test cases
+        '''
+        Credentials.credentialList=[]
+
+
     def test_user_creation(self):
         '''
         method that checks if function creates user 
@@ -52,6 +59,8 @@ class TestClass(unittest.TestCase):
 
         self.new_credential.save_credential()
         self.assertEqual(len(Credentials.credentialList),1)
+    
+
 
     def test_save_multiple_credentials(self):
         '''
@@ -62,7 +71,17 @@ class TestClass(unittest.TestCase):
         test_credential.save_credential()
 
         self.assertEqual(len(Credentials.credentialList),2)
+    def test_delete_credentials(self):
+        '''
+        checks if the delete function deletes the Credentials
+        '''
+        self.new_credential.save_credential()
+        test_credential=Credentials('linkedin','gabu','gabu23')
+        test_credential.delete_credential()
 
+        self.assertEqual(len(Credentials.credentialList),1)
+
+        
 
        
 
