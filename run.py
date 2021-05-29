@@ -51,6 +51,12 @@ def  credentials_display():
     '''
     return Credentials.display_credential()
 
+def password_generated():
+    '''
+    function that generates random password
+    '''
+    return Credentials.password_generator()
+
 
 def main():
     print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
