@@ -16,7 +16,15 @@ def saves_user(user):
     Function that saves user 
     '''
     user.save_user()
-    
+
+def generate_credentials(account,username,password):
+    '''
+    function to creates user Credentials
+    '''
+
+    new_credentials= Credentials(account,username,password)
+
+    return new_credentials    
 
 def main():
     print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
