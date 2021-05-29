@@ -38,6 +38,12 @@ def delete_credentials(credential):
     '''
     credential.delete_credential()
 
+def find_credential(account):
+    '''
+    function that finds credential by account and returns Credentials
+    '''
+    return Credentials.find_by_account(account)
+
 
 def main():
     print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
