@@ -45,6 +45,9 @@ def find_credential(account):
     return Credentials.find_by_account(account)
 
 
+def 
+
+
 def main():
     print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
     

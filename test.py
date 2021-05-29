@@ -95,7 +95,13 @@ class TestClass(unittest.TestCase):
         found_credentials=Credentials.find_credential_by_account('linkedin')
 
         self.assertEqual(found_credentials.username,test_credential.username)
+    
 
+    def test_display_credential(self):
+        '''
+        Methods that checks if credentials are displayed
+        '''
+        self.assertEqual(Credentials.display_credential(),Credentials.credentialList)
         
 
        
