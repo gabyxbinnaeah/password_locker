@@ -32,6 +32,12 @@ def saves_credentials(credentials):
     '''
     credentials.save_credential()
 
+def delete_credentials(credential):
+    '''
+    function to delete credentials
+    '''
+    credential.delete_credential()
+
 
 def main():
     print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
