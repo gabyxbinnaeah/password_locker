@@ -45,7 +45,11 @@ def find_credential(account):
     return Credentials.find_by_account(account)
 
 
-def 
+def  credentials_display():
+    '''
+    function that returns all credentials saved
+    '''
+    return Credentials.display_credential()
 
 
 def main():

@@ -42,5 +42,13 @@ class Credentials:
                 return searchAccount
 
 
+    @classmethod
+    def display_credential(cls):
+        '''
+        display all the saved credentials in contact list
+        '''
+        return cls.credentialList
+
+
 
 
