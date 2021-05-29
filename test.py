@@ -94,7 +94,7 @@ class TestClass(unittest.TestCase):
 
         found_credentials=Credentials.find_credential_by_account('linkedin')
 
-        self.assertEqual(found_credentials.username,Credentials.username)
+        self.assertEqual(found_credentials.username,test_credential.username)
 
         
 

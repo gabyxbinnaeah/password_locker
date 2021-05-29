@@ -1,5 +1,6 @@
+#!/usr/bin/env python3.6
 from user_class import User
-from credential_class import Credential
+from credential_class import Credentials
 
 def create_user(first_name, last_name, email, password):
     '''
@@ -9,4 +10,18 @@ def create_user(first_name, last_name, email, password):
     new_user= User(first_name, last_name, email, password)
 
     return new_user
+
+def saves_user(user):
+    '''
+    Function that saves user 
+    '''
+    user.save_user()
     
+
+def main():
+    print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
+    
+    short_code=input("Enter cu -create user account....:").upper()
+
+if __name__ == "__main__":
+    main()
