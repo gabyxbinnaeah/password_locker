@@ -22,9 +22,16 @@ def generate_credentials(account,username,password):
     function to creates user Credentials
     '''
 
-    new_credentials= Credentials(account,username,password)
+    new_credential= Credentials(account,username,password)
 
-    return new_credentials    
+    return new_credential   
+
+def saves_credentials(credentials):
+    '''
+    Saves credentials
+    '''
+    credentials.save_credential()
+
 
 def main():
     print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
