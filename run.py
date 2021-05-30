@@ -61,7 +61,35 @@ def password_generated():
 def main():
     print("Welcome to password locker online saftey store for your passwords with end-t-end encryption")
     
-    short_code=input("Enter cu -create user account....:").upper()
+    short_code=input("Enter ca  to create user account....:").upper()
+
+    while short_code!='CA':
+        print("invalid option")
+        short_code=input("Enter cu  to create user account....:").upper()
+        
+    else:
+        f_name=input("Enter your first name...:") 
+        l_name=input("Enter your last name....:")
+        email=input("Enter your email...:")
+        password=input("Enter your password...:")
+
+  
+        saves_user(create_user(f_name, l_name, email, password))
+
+        print('\n')
+        print(f"Welcome {f_name} {l_name} , kindly proceed to create your credentials")
+        print('\n')
+
+        while True:
+            short_code=input("use these short codes: cc -create credentials account, del -delete credentials, fc -find credentials, dc -display credential, gp-generates password").upper()
+            if short_code=="CC":
+                
+
+
+ 
+
+
+
 
 if __name__ == "__main__":
     main()
