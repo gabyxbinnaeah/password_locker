@@ -81,11 +81,35 @@ def main():
         print('\n')
 
         while True:
-            short_code=input("use these short codes: cc -create credentials account, del -delete credentials, fc -find credentials, dc -display credential, gp-generates password").upper()
+            short_code=input("use these short codes: cc -create credentials account, del -delete credentials, fc -find credentials, dc -display credential, gp-generates password...:=>").upper()
             if short_code=="CC":
-                social_media_account=input("Enter your social media name...: =>")
-                social_media_username=input("Enter your social media name...:=>")
+                social_media_account=input("Enter your social media account name...: =>")
+                social_media_username=input("Enter your social media username...:=>")
                 social_media_password=input("Enter your social media password..:=>")
+                
+
+                saves_credentials(generate_credentials(social_media_account,social_media_username,social_media_password))
+
+                print('\n')
+                print(f"Your account =>: {social_media_account} of username =>: {social_media_username} credentials have been created and stored with end-to-end encryption")
+                print('\n')
+
+            elif short_code=="DC":
+
+                if credentials_display():
+                    print("Here is a list of your credentials")
+                    print('\n')
+
+                    for credential in credentials_display():
+                         print(f"User account...:{credential.account} username...:{credential.username} and user password...:{credential.password}")
+                         print('\n')
+
+                else :
+                    print("\n")
+                    print("You dont have any store credential")
+                    print('\n')
+
+            
 
 
 
