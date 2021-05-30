@@ -83,7 +83,10 @@ def main():
         while True:
             short_code=input("use these short codes: cc -create credentials account, del -delete credentials, fc -find credentials, dc -display credential, gp-generates password").upper()
             if short_code=="CC":
-                
+                social_media_account=input("Enter your social media name...: =>")
+                social_media_username=input("Enter your social media name...:=>")
+                social_media_password=input("Enter your social media password..:=>")
+
 
 
  
