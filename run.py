@@ -110,6 +110,10 @@ def main():
                     print('\n')
 
             
+            elif short_code=="FC":
+
+                if find_credential():
+                    print
 
 
 
