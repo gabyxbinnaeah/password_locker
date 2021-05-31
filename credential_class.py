@@ -79,7 +79,7 @@ class Credentials:
         lettersListUpper.append(letter)
 
     password_generated = []
-
+   
     def password_generator():
         password_generated_sliced = ''
         for range in lettersList:
