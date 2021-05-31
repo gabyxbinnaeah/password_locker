@@ -69,18 +69,21 @@ class Credentials:
         '''
         return cls.credentialList
 
-    lettersList=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    '''
-     converting lettersList strings to uppercase
-    '''
-    lettersListUpper = []
-    for item in lettersList:
-        letter = item.upper()
-        lettersListUpper.append(letter)
-
-    password_generated = []
+   
    
     def password_generator():
+        lettersList=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+        '''
+        converting lettersList strings to uppercase
+        '''
+        lettersListUpper = []
+        for item in lettersList:
+            letter = item.upper()
+            lettersListUpper.append(letter)
+
+        password_generated = []
+
+
         password_generated_sliced = ''
         for range in lettersList:
             range = randint(0, 100)
